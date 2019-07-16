@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        <ion-icon name="person"></ion-icon>
+        Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form (ngSubmit)='reg_form()' class="ion-padding">
+            <!-- FirstName --> <br>
+            <ion-label for="">FirstName</ion-label>
+            <ion-input type="text" name="f_name" value="" required #f_name="ngModel" [(ngModel)]="user.f_name"></ion-input>
+            <!-- SecondName --> <br>
+            <ion-label for="">SecondName</ion-label>
+            <ion-input type="text" name="s_name" value="" required #s_name="ngModel" [(ngModel)]="user.s_name"></ion-input>
+            <!-- Email --> <br>
+            <ion-label for="">Email</ion-label>
+            <ion-input type="email" name="email" value="" email required #email="ngModel" [(ngModel)]="user.email"></ion-input>
+            <!-- Password --> <br>
+            <ion-label for="">Password</ion-label>
+            <ion-input type="password" name="pass" value="" required minlength="8" #pass="ngModel" [(ngModel)]="user.pass"></ion-input>
+            <!-- Address --> <br>
+            <ion-label for="">Address</ion-label>
+            <ion-input type="text" name="adress" value="" required #adress="ngModel" [(ngModel)]="user.adress"></ion-input>
+            <!-- Phone --> <br>
+            <ion-label for="">Phone</ion-label>
+            <ion-input type="text" name="phone" value="" required #phone="ngModel" [(ngModel)]="user.phone"></ion-input>
+            <!-- Button --> <br>
+            <ion-button type="submit" name="button" class="btn btn-primary" >Submit</ion-button>
+        </form>
+</ion-content>
